@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#19221d">
+  <meta name="description" content="AfroCut terms and conditions for booking and managing barber appointments.">
+  <title>Terms &amp; Conditions | AfroCut</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #20241f;
+      --muted: #696d64;
+      --paper: #f7f6f1;
+      --white: #fffefa;
+      --line: #e5e4dc;
+      --green: #b9dd68;
+      --forest: #19221d;
+      --orange: #d9643a;
+      --sans: "DM Sans", sans-serif;
+      --display: "Manrope", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 32px; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.72;
+    }
+    a { color: inherit; }
+    .topbar {
+      height: 76px;
+      padding: 0 max(6vw, 24px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--forest);
+      color: var(--white);
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: inherit;
+      font-family: var(--display);
+      font-size: 19px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .brand-mark {
+      width: 29px;
+      height: 29px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--green);
+      color: var(--forest);
+      font-size: 14px;
+      line-height: 1;
+    }
+    .top-link {
+      color: #d9ddd7;
+      font-size: 13px;
+      text-decoration-color: #728076;
+      text-underline-offset: 4px;
+    }
+    .top-link:hover { color: var(--green); }
+    .masthead {
+      min-height: 270px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(300px, 38%);
+      background: var(--forest);
+      color: var(--white);
+    }
+    .masthead-copy {
+      padding: 50px max(6vw, 24px) 55px;
+      align-self: center;
+      animation: rise-in .55s ease both;
+    }
+    .eyebrow {
+      margin: 0 0 15px;
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 { font-family: var(--display); }
+    h1 {
+      max-width: 630px;
+      margin: 0;
+      font-size: clamp(40px, 5vw, 62px);
+      font-weight: 700;
+      line-height: 1.08;
+    }
+    .masthead-copy > p:last-child {
+      max-width: 530px;
+      margin: 18px 0 0;
+      color: #c5cbc4;
+      font-size: 15px;
+    }
+    .masthead-image {
+      min-height: 270px;
+      background: #343d34 url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1100&q=85") center 47% / cover no-repeat;
+      position: relative;
+    }
+    .masthead-image::after {
+      position: absolute;
+      inset: 0;
+      content: "";
+      background: linear-gradient(90deg, var(--forest) 0%, rgba(25, 34, 29, .22) 34%, transparent 75%);
+    }
+    .page-layout {
+      width: min(1100px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 55px 0 100px;
+      display: grid;
+      grid-template-columns: 225px minmax(0, 700px);
+      justify-content: space-between;
+      gap: 64px;
+      align-items: start;
+    }
+    .contents {
+      position: sticky;
+      top: 28px;
+      padding-top: 7px;
+    }
+    .contents-title {
+      margin: 0 0 15px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+    .contents ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border-left: 1px solid var(--line);
+    }
+    .contents a {
+      display: block;
+      padding: 7px 12px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+      text-decoration: none;
+      border-left: 2px solid transparent;
+      margin-left: -1px;
+    }
+    .contents a:hover, .contents a:focus-visible {
+      border-left-color: var(--orange);
+      color: var(--ink);
+    }
+    .document-meta {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 30px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .meta-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--orange); }
+    .terms-section {
+      padding: 25px 0 27px;
+      border-top: 1px solid var(--line);
+      animation: rise-in .5s ease both;
+    }
+    .terms-section:first-of-type { border-top: 0; padding-top: 0; }
+    .terms-section h2 {
+      display: flex;
+      align-items: baseline;
+      gap: 13px;
+      margin: 0 0 12px;
+      font-size: 20px;
+      line-height: 1.35;
+    }
+    .section-number {
+      flex: 0 0 25px;
+      color: #899080;
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .terms-section p { margin: 0 0 11px; color: #4e524c; }
+    .terms-section p:last-child { margin-bottom: 0; }
+    .terms-section ul { margin: 9px 0 12px; padding-left: 38px; color: #4e524c; }
+    .terms-section li { padding-left: 4px; margin: 5px 0; }
+    .terms-section li::marker { color: var(--orange); }
+    .notice {
+      margin: 0 0 30px;
+      padding: 16px 18px;
+      border-left: 3px solid var(--green);
+      background: #eeefe6;
+      color: #41473e;
+      font-size: 13px;
+    }
+    .notice strong { color: var(--ink); }
+    .contact-link { text-decoration-color: #a3a696; text-underline-offset: 3px; }
+    footer {
+      padding: 23px max(6vw, 24px);
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      background: var(--forest);
+      color: #c5cbc4;
+      font-size: 12px;
+    }
+    footer a { color: var(--green); text-underline-offset: 3px; }
+    @keyframes rise-in {
+      from { opacity: 0; transform: translateY(9px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+    }
+    @media (max-width: 760px) {
+      .topbar { height: 64px; }
+      .masthead { grid-template-columns: 1fr; }
+      .masthead-copy { padding-top: 43px; padding-bottom: 35px; }
+      .masthead-image { min-height: 145px; background-position: center 52%; }
+      .masthead-image::after { background: linear-gradient(180deg, var(--forest), transparent 45%); }
+      .page-layout { width: min(100% - 40px, 680px); padding-top: 34px; grid-template-columns: 1fr; gap: 30px; }
+      .contents { position: static; padding: 0 0 18px; border-bottom: 1px solid var(--line); }
+      .contents ol { display: flex; overflow-x: auto; border-left: 0; gap: 7px; padding-bottom: 5px; }
+      .contents li { flex: 0 0 auto; }
+      .contents a { padding: 7px 10px; border: 1px solid var(--line); border-radius: 3px; margin: 0; white-space: nowrap; }
+      .contents a:hover, .contents a:focus-visible { border-color: var(--orange); }
+    }
+    @media (max-width: 420px) {
+      .top-link { font-size: 12px; }
+      .page-layout { width: calc(100% - 36px); }
+      .terms-section h2 { font-size: 18px; }
+      footer { flex-direction: column; gap: 5px; }
+    }
+    @media print {
+      body { background: white; }
+      .topbar, .masthead-image, .contents, footer { display: none; }
+      .masthead { min-height: 0; background: white; color: var(--ink); }
+      .masthead-copy { padding: 0 0 25px; }
+      .eyebrow, .masthead-copy > p:last-child { color: var(--muted); }
+      h1 { font-size: 34px; }
+      .page-layout { display: block; width: 100%; padding: 0; }
+      .terms-section { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="AfroCut home"><span class="brand-mark" aria-hidden="true">A</span> afrocut</a>
+    <a class="top-link" href="#contact">Need help? Contact support</a>
+  </header>
+
+  <div class="masthead" id="top">
+    <div class="masthead-copy">
+      <p class="eyebrow">The fine print, made fair</p>
+      <h1>Terms &amp;<br>Conditions</h1>
+      <p>Our ground rules for finding your barber, booking your next cut, and showing up for each other.</p>
+    </div>
+    <div class="masthead-image" role="img" aria-label="Inside a neighborhood barbershop"></div>
+  </div>
+
+  <main class="page-layout">
+    <nav class="contents" aria-label="Terms sections">
+      <p class="contents-title">On this page</p>
+      <ol>
+        <li><a href="#agreement">Agreement</a></li>
+        <li><a href="#booking">Bookings</a></li>
+        <li><a href="#changes">Changes &amp; cancellations</a></li>
+        <li><a href="#payment">Prices &amp; payment</a></li>
+        <li><a href="#your-account">Your account</a></li>
+        <li><a href="#conduct">Respect &amp; safety</a></li>
+        <li><a href="#privacy">Your information</a></li>
+        <li><a href="#responsibility">Responsibility</a></li>
+        <li><a href="#updates">Updates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
+
+    <article>
+      <p class="document-meta"><span class="meta-dot" aria-hidden="true"></span> Last updated October 16, 2026</p>
+      <div class="notice"><strong>A quick heads-up:</strong> These terms explain how AfroCut's booking service works. Please read them before making a booking. By using AfroCut, you agree to these terms.</div>
+
+      <section class="terms-section" id="agreement">
+        <h2><span class="section-number">01</span> The agreement</h2>
+        <p>These Terms and Conditions apply when you access or use the AfroCut website or app (together, the “Service”) to find barbers and manage appointments. “AfroCut,” “we,” and “us” refer to the operator of the Service. “You” means anyone using it.</p>
+        <p>If you do not agree with these terms, please do not use the Service. You must be old enough to enter into a binding agreement where you live. If you are booking for someone else, you confirm you have permission to do so.</p>
+      </section>
+
+      <section class="terms-section" id="booking">
+        <h2><span class="section-number">02</span> Finding and booking a barber</h2>
+        <p>AfroCut helps you discover independent barbers and request or book appointments. A booking is confirmed only when the Service shows it as confirmed or you receive a confirmation message. Check the service, location, date, and time before confirming.</p>
+        <p>Barbers are responsible for the services they offer, their availability, and the accuracy of their profiles. Unless we clearly say otherwise, AfroCut is a booking platform and does not perform or employ the barbers providing services.</p>
+      </section>
+
+      <section class="terms-section" id="changes">
+        <h2><span class="section-number">03</span> Changes, cancellations &amp; late arrivals</h2>
+        <p>Manage or cancel your appointment through the Service as early as you can. Each barber may set their own cancellation window, late-arrival policy, and no-show fee; review those details before booking. Any applicable fee should be shown before you confirm.</p>
+        <p>If you arrive late, the barber may need to shorten, reschedule, or cancel the appointment. If a barber changes or cancels your booking, check the Service for updated details or contact support. Refund eligibility depends on the payment method, the barber's stated policy, and applicable law.</p>
+      </section>
+
+      <section class="terms-section" id="payment">
+        <h2><span class="section-number">04</span> Prices &amp; payment</h2>
+        <p>Prices and any applicable taxes or fees will be shown during booking when available. The barber sets the price of their services. Some bookings may be paid in the app; others may be paid directly to the barber. The payment method and timing will be shown before you confirm.</p>
+        <p>You authorize the applicable charge when you submit a payment. Keep your payment details current and contact us promptly about a charge you believe is incorrect.</p>
+      </section>
+
+      <section class="terms-section" id="your-account">
+        <h2><span class="section-number">05</span> Your account</h2>
+        <p>Keep your sign-in details private and make sure your account information is accurate. You are responsible for activity on your account. Tell us promptly if you think someone else has accessed it.</p>
+        <p>We may restrict or suspend access when reasonably necessary to protect users, investigate suspected fraud or misuse, or comply with law. You can stop using the Service at any time; contact support if you need help closing your account.</p>
+      </section>
+
+      <section class="terms-section" id="conduct">
+        <h2><span class="section-number">06</span> Respect &amp; safety</h2>
+        <p>Help keep the community welcoming. When using AfroCut or meeting for an appointment, you agree not to:</p>
+        <ul>
+          <li>Harass, threaten, discriminate against, or harm another person.</li>
+          <li>Post misleading, unlawful, or abusive content, or impersonate someone else.</li>
+          <li>Use the Service to commit fraud, disrupt its operation, or access it without permission.</li>
+          <li>Ignore a barber's reasonable safety instructions or appointment policies.</li>
+        </ul>
+        <p>We may review reports and take appropriate action, including removing content or limiting access.</p>
+      </section>
+
+      <section class="terms-section" id="privacy">
+        <h2><span class="section-number">07</span> Your information</h2>
+        <p>We use personal information to provide and improve the Service, support bookings, and help keep accounts secure. Information needed to arrange an appointment may be shared with the relevant barber. Our Privacy Policy explains what we collect, how we use it, and the choices available to you.</p>
+      </section>
+
+      <section class="terms-section" id="responsibility">
+        <h2><span class="section-number">08</span> Service availability &amp; responsibility</h2>
+        <p>We work to keep AfroCut available and accurate, but the Service may occasionally be interrupted or contain errors. We do not guarantee a barber's availability, the outcome of a service, or the accuracy of information provided by others.</p>
+        <p>To the extent permitted by law, AfroCut is not responsible for indirect or unforeseeable loss arising from use of the Service or for services provided by independent barbers. Nothing in these terms limits a right or remedy that cannot lawfully be limited. Where we are liable, our responsibility is limited to the extent permitted by applicable law.</p>
+      </section>
+
+      <section class="terms-section" id="updates">
+        <h2><span class="section-number">09</span> Changes to these terms</h2>
+        <p>We may update these terms as the Service changes or when required by law. We will post the revised terms here and update the date above. If a change materially affects your use of AfroCut, we will take reasonable steps to notify you. Continued use after updated terms take effect means you accept them.</p>
+      </section>
+
+      <section class="terms-section" id="contact">
+        <h2><span class="section-number">10</span> Questions or concerns?</h2>
+        <p>For help with these terms, your account, or a booking, contact AfroCut through the support option in the app or website. If your question is about a barber's service, contact the barber directly as well.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <span>© 2026 AfroCut. Built around good cuts and good company.</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+</body>
+</html>
