@@ -1,137 +1,223 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#19221d">
-  <meta name="description" content="AfroCut terms and conditions for booking and managing barber appointments.">
-  <title>Terms &amp; Conditions | AfroCut</title>
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="AfroCut Terms and Conditions for booking barber appointments.">
+  <title>Terms & Conditions | AfroCut</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Ethiopic:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      color-scheme: light;
-      --ink: #20241f;
-      --muted: #696d64;
-      --paper: #f7f6f1;
-      --white: #fffefa;
-      --line: #e5e4dc;
-      --green: #b9dd68;
-      --forest: #19221d;
-      --orange: #d9643a;
-      --sans: "DM Sans", sans-serif;
-      --display: "Manrope", sans-serif;
+      --orange: #ff6a00;
+      --orange-light: #fff0e6;
+      --black: #111111;
+      --ink: #202020;
+      --muted: #6b6b6b;
+      --paper: #f7f7f7;
+      --white: #ffffff;
+      --line: #e5e5e5;
+      --body-font: "DM Sans", "Noto Sans Ethiopic", sans-serif;
+      --heading-font: "Manrope", "Noto Sans Ethiopic", sans-serif;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 32px; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 25px;
+    }
+
     body {
       margin: 0;
       background: var(--paper);
       color: var(--ink);
-      font-family: var(--sans);
+      font-family: var(--body-font);
       font-size: 15px;
-      line-height: 1.72;
+      line-height: 1.8;
     }
-    a { color: inherit; }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--orange);
+      outline-offset: 4px;
+    }
+
+    /* HEADER */
+
     .topbar {
-      height: 76px;
-      padding: 0 max(6vw, 24px);
+      min-height: 74px;
+      padding: 12px max(6vw, 24px);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: var(--forest);
+      gap: 18px;
+      background: var(--black);
       color: var(--white);
     }
+
     .brand {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      color: inherit;
-      font-family: var(--display);
-      font-size: 19px;
+      color: var(--white);
+      font-family: var(--heading-font);
+      font-size: 20px;
       font-weight: 800;
       text-decoration: none;
+      letter-spacing: -0.5px;
     }
+
     .brand-mark {
-      width: 29px;
-      height: 29px;
+      width: 34px;
+      height: 34px;
       display: grid;
       place-items: center;
-      border-radius: 50%;
-      background: var(--green);
-      color: var(--forest);
-      font-size: 14px;
-      line-height: 1;
+      border-radius: 8px;
+      background: var(--orange);
+      color: var(--black);
+      font-weight: 800;
     }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 18px;
+    }
+
     .top-link {
-      color: #d9ddd7;
+      color: #e0e0e0;
       font-size: 13px;
-      text-decoration-color: #728076;
       text-underline-offset: 4px;
     }
-    .top-link:hover { color: var(--green); }
+
+    .top-link:hover {
+      color: var(--orange);
+    }
+
+    .language-switch {
+      padding: 9px 15px;
+      border: 1px solid #555;
+      border-radius: 30px;
+      background: transparent;
+      color: var(--white);
+      font-family: var(--body-font);
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .language-switch:hover {
+      background: var(--orange);
+      border-color: var(--orange);
+      color: var(--black);
+    }
+
+    /* HERO */
+
     .masthead {
-      min-height: 270px;
+      min-height: 280px;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(300px, 38%);
-      background: var(--forest);
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 38%);
+      background: var(--black);
       color: var(--white);
     }
+
     .masthead-copy {
-      padding: 50px max(6vw, 24px) 55px;
       align-self: center;
-      animation: rise-in .55s ease both;
+      padding: 50px max(6vw, 24px) 55px;
+      animation: rise-in 0.5s ease both;
     }
+
     .eyebrow {
       margin: 0 0 15px;
-      color: var(--green);
+      color: var(--orange);
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
     }
-    h1, h2, h3 { font-family: var(--display); }
-    h1 {
-      max-width: 630px;
-      margin: 0;
-      font-size: clamp(40px, 5vw, 62px);
-      font-weight: 700;
-      line-height: 1.08;
+
+    h1,
+    h2 {
+      font-family: var(--heading-font);
     }
+
+    h1 {
+      max-width: 650px;
+      margin: 0;
+      font-size: clamp(38px, 5vw, 62px);
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -1.5px;
+    }
+
     .masthead-copy > p:last-child {
-      max-width: 530px;
+      max-width: 540px;
       margin: 18px 0 0;
-      color: #c5cbc4;
+      color: #c9c9c9;
       font-size: 15px;
     }
+
     .masthead-image {
-      min-height: 270px;
-      background: #343d34 url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1100&q=85") center 47% / cover no-repeat;
       position: relative;
+      min-height: 280px;
+      background:
+        #292929
+        url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1100&q=85")
+        center 47% / cover no-repeat;
     }
+
     .masthead-image::after {
       position: absolute;
       inset: 0;
       content: "";
-      background: linear-gradient(90deg, var(--forest) 0%, rgba(25, 34, 29, .22) 34%, transparent 75%);
+      background: linear-gradient(
+        90deg,
+        var(--black) 0%,
+        rgba(17, 17, 17, 0.2) 38%,
+        transparent 78%
+      );
     }
+
+    /* MAIN LAYOUT */
+
     .page-layout {
       width: min(1100px, calc(100% - 48px));
       margin: 0 auto;
-      padding: 55px 0 100px;
+      padding: 55px 0 90px;
       display: grid;
       grid-template-columns: 225px minmax(0, 700px);
       justify-content: space-between;
-      gap: 64px;
+      gap: 60px;
       align-items: start;
     }
+
+    /* TABLE OF CONTENTS */
+
     .contents {
       position: sticky;
-      top: 28px;
+      top: 25px;
       padding-top: 7px;
     }
+
     .contents-title {
       margin: 0 0 15px;
       color: var(--muted);
@@ -140,223 +226,889 @@
       letter-spacing: 1.2px;
       text-transform: uppercase;
     }
+
     .contents ol {
       margin: 0;
       padding: 0;
       list-style: none;
       border-left: 1px solid var(--line);
     }
+
     .contents a {
       display: block;
+      margin-left: -1px;
       padding: 7px 12px;
+      border-left: 2px solid transparent;
       color: var(--muted);
       font-size: 12px;
-      line-height: 1.45;
+      line-height: 1.5;
       text-decoration: none;
-      border-left: 2px solid transparent;
-      margin-left: -1px;
     }
-    .contents a:hover, .contents a:focus-visible {
+
+    .contents a:hover {
       border-left-color: var(--orange);
-      color: var(--ink);
+      color: var(--black);
     }
+
+    /* DOCUMENT META AND NOTICE */
+
     .document-meta {
       display: flex;
       align-items: center;
       gap: 9px;
-      margin: 0 0 30px;
+      margin: 0 0 27px;
       color: var(--muted);
       font-size: 12px;
     }
-    .meta-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--orange); }
+
+    .meta-dot {
+      width: 6px;
+      height: 6px;
+      flex: 0 0 6px;
+      border-radius: 50%;
+      background: var(--orange);
+    }
+
+    .notice {
+      margin: 0 0 30px;
+      padding: 16px 18px;
+      border-left: 4px solid var(--orange);
+      border-radius: 0 6px 6px 0;
+      background: var(--orange-light);
+      color: #333333;
+      font-size: 13px;
+    }
+
+    .notice strong {
+      color: var(--black);
+    }
+
+    /* TERMS SECTIONS */
+
     .terms-section {
       padding: 25px 0 27px;
       border-top: 1px solid var(--line);
-      animation: rise-in .5s ease both;
+      animation: rise-in 0.5s ease both;
     }
-    .terms-section:first-of-type { border-top: 0; padding-top: 0; }
+
+    .terms-section:first-of-type {
+      padding-top: 0;
+      border-top: 0;
+    }
+
     .terms-section h2 {
       display: flex;
       align-items: baseline;
       gap: 13px;
       margin: 0 0 12px;
       font-size: 20px;
-      line-height: 1.35;
+      line-height: 1.5;
     }
+
     .section-number {
       flex: 0 0 25px;
-      color: #899080;
-      font-family: var(--sans);
-      font-size: 11px;
-      font-weight: 600;
+      color: var(--orange);
+      font-family: var(--body-font);
+      font-size: 12px;
+      font-weight: 700;
     }
-    .terms-section p { margin: 0 0 11px; color: #4e524c; }
-    .terms-section p:last-child { margin-bottom: 0; }
-    .terms-section ul { margin: 9px 0 12px; padding-left: 38px; color: #4e524c; }
-    .terms-section li { padding-left: 4px; margin: 5px 0; }
-    .terms-section li::marker { color: var(--orange); }
-    .notice {
-      margin: 0 0 30px;
-      padding: 16px 18px;
-      border-left: 3px solid var(--green);
-      background: #eeefe6;
-      color: #41473e;
-      font-size: 13px;
+
+    .terms-section p {
+      margin: 0 0 12px;
+      color: #4e4e4e;
     }
-    .notice strong { color: var(--ink); }
-    .contact-link { text-decoration-color: #a3a696; text-underline-offset: 3px; }
+
+    .terms-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .terms-section ul {
+      margin: 9px 0 14px;
+      padding-left: 27px;
+      color: #4e4e4e;
+    }
+
+    .terms-section li {
+      margin: 6px 0;
+      padding-left: 4px;
+    }
+
+    .terms-section li::marker {
+      color: var(--orange);
+    }
+
+    /* LANGUAGE SWITCHING */
+
+    .lang-en,
+    .lang-am {
+      display: none;
+    }
+
+    .inline-en,
+    .inline-am {
+      display: none;
+    }
+
+    body[data-lang="en"] .lang-en,
+    body[data-lang="am"] .lang-am {
+      display: block;
+    }
+
+    body[data-lang="en"] .inline-en,
+    body[data-lang="am"] .inline-am {
+      display: inline;
+    }
+
+    body[data-lang="am"] {
+      font-family: "Noto Sans Ethiopic", sans-serif;
+      line-height: 1.95;
+    }
+
+    body[data-lang="am"] h1,
+    body[data-lang="am"] h2,
+    body[data-lang="am"] .brand {
+      font-family: "Noto Sans Ethiopic", sans-serif;
+      letter-spacing: 0;
+    }
+
+    body[data-lang="am"] .eyebrow,
+    body[data-lang="am"] .contents-title {
+      letter-spacing: 0;
+    }
+
+    /* FOOTER */
+
     footer {
-      padding: 23px max(6vw, 24px);
+      padding: 24px max(6vw, 24px);
       display: flex;
       justify-content: space-between;
+      align-items: center;
       gap: 20px;
-      background: var(--forest);
-      color: #c5cbc4;
+      background: var(--black);
+      color: #c9c9c9;
       font-size: 12px;
     }
-    footer a { color: var(--green); text-underline-offset: 3px; }
+
+    footer a {
+      color: var(--orange);
+      text-underline-offset: 3px;
+      white-space: nowrap;
+    }
+
+    /* ANIMATION */
+
     @keyframes rise-in {
-      from { opacity: 0; transform: translateY(9px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(9px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
+
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
     }
-    @media (max-width: 760px) {
-      .topbar { height: 64px; }
-      .masthead { grid-template-columns: 1fr; }
-      .masthead-copy { padding-top: 43px; padding-bottom: 35px; }
-      .masthead-image { min-height: 145px; background-position: center 52%; }
-      .masthead-image::after { background: linear-gradient(180deg, var(--forest), transparent 45%); }
-      .page-layout { width: min(100% - 40px, 680px); padding-top: 34px; grid-template-columns: 1fr; gap: 30px; }
-      .contents { position: static; padding: 0 0 18px; border-bottom: 1px solid var(--line); }
-      .contents ol { display: flex; overflow-x: auto; border-left: 0; gap: 7px; padding-bottom: 5px; }
-      .contents li { flex: 0 0 auto; }
-      .contents a { padding: 7px 10px; border: 1px solid var(--line); border-radius: 3px; margin: 0; white-space: nowrap; }
-      .contents a:hover, .contents a:focus-visible { border-color: var(--orange); }
+
+    /* TABLET AND MOBILE */
+
+    @media (max-width: 850px) {
+      .page-layout {
+        grid-template-columns: 190px minmax(0, 1fr);
+        gap: 32px;
+      }
     }
+
+    @media (max-width: 700px) {
+      .topbar {
+        min-height: 66px;
+        padding: 12px 20px;
+      }
+
+      .top-actions {
+        gap: 10px;
+      }
+
+      .top-link {
+        display: none;
+      }
+
+      .masthead {
+        grid-template-columns: 1fr;
+      }
+
+      .masthead-copy {
+        padding: 42px 24px 35px;
+      }
+
+      .masthead-image {
+        min-height: 150px;
+        background-position: center 52%;
+      }
+
+      .masthead-image::after {
+        background: linear-gradient(
+          180deg,
+          var(--black),
+          transparent 48%
+        );
+      }
+
+      .page-layout {
+        width: min(100% - 40px, 680px);
+        padding-top: 34px;
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .contents {
+        position: static;
+        padding-bottom: 17px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .contents ol {
+        display: flex;
+        gap: 7px;
+        overflow-x: auto;
+        padding-bottom: 6px;
+        border-left: 0;
+      }
+
+      .contents li {
+        flex: 0 0 auto;
+      }
+
+      .contents a {
+        margin: 0;
+        padding: 7px 10px;
+        border: 1px solid var(--line);
+        border-radius: 5px;
+        white-space: nowrap;
+      }
+
+      .contents a:hover {
+        border-color: var(--orange);
+      }
+    }
+
     @media (max-width: 420px) {
-      .top-link { font-size: 12px; }
-      .page-layout { width: calc(100% - 36px); }
-      .terms-section h2 { font-size: 18px; }
-      footer { flex-direction: column; gap: 5px; }
+      .brand {
+        font-size: 17px;
+      }
+
+      .language-switch {
+        padding: 8px 11px;
+        font-size: 11px;
+      }
+
+      .page-layout {
+        width: calc(100% - 36px);
+      }
+
+      .terms-section h2 {
+        font-size: 18px;
+      }
+
+      footer {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 7px;
+      }
     }
+
+    /* PRINT */
+
     @media print {
-      body { background: white; }
-      .topbar, .masthead-image, .contents, footer { display: none; }
-      .masthead { min-height: 0; background: white; color: var(--ink); }
-      .masthead-copy { padding: 0 0 25px; }
-      .eyebrow, .masthead-copy > p:last-child { color: var(--muted); }
-      h1 { font-size: 34px; }
-      .page-layout { display: block; width: 100%; padding: 0; }
-      .terms-section { break-inside: avoid; }
+      body {
+        background: #ffffff;
+      }
+
+      .topbar,
+      .masthead-image,
+      .contents,
+      footer,
+      .language-switch {
+        display: none !important;
+      }
+
+      .masthead {
+        min-height: 0;
+        background: #ffffff;
+        color: var(--ink);
+      }
+
+      .masthead-copy {
+        padding: 0 0 25px;
+      }
+
+      .eyebrow,
+      .masthead-copy > p:last-child {
+        color: var(--muted);
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .page-layout {
+        display: block;
+        width: 100%;
+        padding: 0;
+      }
+
+      .terms-section {
+        break-inside: avoid;
+      }
     }
   </style>
 </head>
-<body>
+
+<body data-lang="en">
+
   <header class="topbar">
-    <a class="brand" href="#top" aria-label="AfroCut home"><span class="brand-mark" aria-hidden="true">A</span> afrocut</a>
-    <a class="top-link" href="#contact">Need help? Contact support</a>
+    <a class="brand" href="#top" aria-label="AfroCut home">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      afrocut
+    </a>
+
+    <div class="top-actions">
+      <a class="top-link" href="#contact">
+        <span class="inline-en">Need help? Contact support</span>
+        <span class="inline-am">እገዛ ይፈልጋሉ? ድጋፍን ያግኙ</span>
+      </a>
+
+      <button
+        class="language-switch"
+        id="languageToggle"
+        type="button"
+        aria-label="Switch language"
+      >አማርኛ</button>
+    </div>
   </header>
 
-  <div class="masthead" id="top">
+  <section class="masthead" id="top">
     <div class="masthead-copy">
-      <p class="eyebrow">The fine print, made fair</p>
-      <h1>Terms &amp;<br>Conditions</h1>
-      <p>Our ground rules for finding your barber, booking your next cut, and showing up for each other.</p>
+      <p class="eyebrow">
+        <span class="inline-en">The fine print, made fair</span>
+        <span class="inline-am">ግልጽና ፍትሃዊ የአጠቃቀም ደንቦች</span>
+      </p>
+
+      <h1>
+        <span class="lang-en">Terms &amp;<br>Conditions</span>
+        <span class="lang-am">የአጠቃቀም<br>ውሎችና ሁኔታዎች</span>
+      </h1>
+
+      <p class="lang-en">
+        Our ground rules for finding your barber, booking your next cut,
+        and showing up for each other.
+      </p>
+
+      <p class="lang-am">
+        የፀጉር ቆራጭ ለማግኘት፣ ቀጠሮ ለመያዝ እና በተስማሙበት
+        ጊዜ ለመገኘት የሚያግዙ ደንቦቻችን።
+      </p>
     </div>
-    <div class="masthead-image" role="img" aria-label="Inside a neighborhood barbershop"></div>
-  </div>
+
+    <div
+      class="masthead-image"
+      role="img"
+      aria-label="Inside a neighborhood barbershop"
+    ></div>
+  </section>
 
   <main class="page-layout">
+
     <nav class="contents" aria-label="Terms sections">
-      <p class="contents-title">On this page</p>
+      <p class="contents-title">
+        <span class="inline-en">On this page</span>
+        <span class="inline-am">በዚህ ገጽ ላይ</span>
+      </p>
+
       <ol>
-        <li><a href="#agreement">Agreement</a></li>
-        <li><a href="#booking">Bookings</a></li>
-        <li><a href="#changes">Changes &amp; cancellations</a></li>
-        <li><a href="#payment">Prices &amp; payment</a></li>
-        <li><a href="#your-account">Your account</a></li>
-        <li><a href="#conduct">Respect &amp; safety</a></li>
-        <li><a href="#privacy">Your information</a></li>
-        <li><a href="#responsibility">Responsibility</a></li>
-        <li><a href="#updates">Updates</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#agreement"><span class="inline-en">Agreement</span><span class="inline-am">ስምምነት</span></a></li>
+        <li><a href="#booking"><span class="inline-en">Bookings</span><span class="inline-am">ቀጠሮ ማስያዝ</span></a></li>
+        <li><a href="#changes"><span class="inline-en">Changes &amp; cancellations</span><span class="inline-am">ለውጥና ስረዛ</span></a></li>
+        <li><a href="#payment"><span class="inline-en">Prices &amp; payment</span><span class="inline-am">ዋጋና ክፍያ</span></a></li>
+        <li><a href="#your-account"><span class="inline-en">Your account</span><span class="inline-am">መለያዎ</span></a></li>
+        <li><a href="#conduct"><span class="inline-en">Respect &amp; safety</span><span class="inline-am">አክብሮትና ደህንነት</span></a></li>
+        <li><a href="#privacy"><span class="inline-en">Your information</span><span class="inline-am">የግል መረጃ</span></a></li>
+        <li><a href="#responsibility"><span class="inline-en">Responsibility</span><span class="inline-am">ኃላፊነት</span></a></li>
+        <li><a href="#updates"><span class="inline-en">Updates</span><span class="inline-am">የውሎች ማሻሻያ</span></a></li>
+        <li><a href="#contact"><span class="inline-en">Contact</span><span class="inline-am">ያግኙን</span></a></li>
       </ol>
     </nav>
 
     <article>
-      <p class="document-meta"><span class="meta-dot" aria-hidden="true"></span> Last updated October 16, 2026</p>
-      <div class="notice"><strong>A quick heads-up:</strong> These terms explain how AfroCut's booking service works. Please read them before making a booking. By using AfroCut, you agree to these terms.</div>
+
+      <p class="document-meta">
+        <span class="meta-dot" aria-hidden="true"></span>
+        <span class="inline-en">Last updated October 16, 2026</span>
+        <span class="inline-am">መጨረሻ የተዘመነው፦ October 16, 2026</span>
+      </p>
+
+      <div class="notice">
+        <div class="lang-en">
+          <strong>A quick heads-up:</strong>
+          These terms explain how AfroCut's booking service works.
+          Please read them before making a booking. By using AfroCut,
+          you agree to these terms.
+        </div>
+
+        <div class="lang-am">
+          <strong>አስፈላጊ ማሳሰቢያ፦</strong>
+          እነዚህ ውሎች የAfroCut የቀጠሮ አገልግሎት እንዴት
+          እንደሚሰራ ያብራራሉ። ቀጠሮ ከመያዝዎ በፊት ያንብቡ።
+          AfroCutን በመጠቀም እነዚህን ውሎች ተቀብለዋል ማለት ነው።
+        </div>
+      </div>
 
       <section class="terms-section" id="agreement">
-        <h2><span class="section-number">01</span> The agreement</h2>
-        <p>These Terms and Conditions apply when you access or use the AfroCut website or app (together, the “Service”) to find barbers and manage appointments. “AfroCut,” “we,” and “us” refer to the operator of the Service. “You” means anyone using it.</p>
-        <p>If you do not agree with these terms, please do not use the Service. You must be old enough to enter into a binding agreement where you live. If you are booking for someone else, you confirm you have permission to do so.</p>
+        <h2>
+          <span class="section-number">01</span>
+          <span class="lang-en">The agreement</span>
+          <span class="lang-am">ስምምነቱ</span>
+        </h2>
+
+        <div class="lang-en">
+          <p>
+            These Terms and Conditions apply when you access or use the
+            AfroCut website or app (together, the “Service”) to find barbers
+            and manage appointments. “AfroCut,” “we,” and “us” refer to the
+            operator of the Service. “You” means anyone using it.
+          </p>
+          <p>
+            If you do not agree with these terms, please do not use the
+            Service. You must be old enough to enter into a binding agreement
+            where you live. If you are booking for someone else, you confirm
+            you have permission to do so.
+          </p>
+        </div>
+
+        <div class="lang-am">
+          <p>
+            እነዚህ የአጠቃቀም ውሎችና ሁኔታዎች የፀጉር ቆራጮችን
+            ለማግኘትና ቀጠሮዎችን ለማስተዳደር የAfroCut ድረ-ገጽን
+            ወይም መተግበሪያን (በአጠቃላይ “አገልግሎቱ”) ሲጠቀሙ
+            ተፈጻሚ ይሆናሉ። “AfroCut”፣ “እኛ” እና “የእኛ” የአገልግሎቱን
+            አስተዳዳሪ ያመለክታሉ። “እርስዎ” ማለት አገልግሎቱን
+            የሚጠቀም ማንኛውም ሰው ነው።
+          </p>
+          <p>
+            ከእነዚህ ውሎች ጋር ካልተስማሙ እባክዎ አገልግሎቱን
+            አይጠቀሙ። በሚኖሩበት ቦታ በሕግ የሚያስገድድ ስምምነት
+            ለመፈጸም የሚያስችል ዕድሜ ላይ መሆን አለብዎት።
+            ለሌላ ሰው ቀጠሮ ካስያዙ፣ ይህን ለማድረግ ፈቃድ
+            እንዳለዎት ያረጋግጣሉ።
+          </p>
+        </div>
       </section>
 
       <section class="terms-section" id="booking">
-        <h2><span class="section-number">02</span> Finding and booking a barber</h2>
-        <p>AfroCut helps you discover independent barbers and request or book appointments. A booking is confirmed only when the Service shows it as confirmed or you receive a confirmation message. Check the service, location, date, and time before confirming.</p>
-        <p>Barbers are responsible for the services they offer, their availability, and the accuracy of their profiles. Unless we clearly say otherwise, AfroCut is a booking platform and does not perform or employ the barbers providing services.</p>
+        <h2>
+          <span class="section-number">02</span>
+          <span class="lang-en">Finding and booking a barber</span>
+          <span class="lang-am">ፀጉር ቆራጭ ማግኘትና ቀጠሮ መያዝ</span>
+        </h2>
+
+        <div class="lang-en">
+          <p>
+            AfroCut helps you discover independent barbers and request or
+            book appointments. A booking is confirmed only when the Service
+            shows it as confirmed or you receive a confirmation message.
+            Check the service, location, date, and time before confirming.
+          </p>
+          <p>
+            Barbers are responsible for the services they offer, their
+            availability, and the accuracy of their profiles. Unless we
+            clearly say otherwise, AfroCut is a booking platform and does
+            not perform or employ the barbers providing services.
+          </p>
+        </div>
+
+        <div class="lang-am">
+          <p>
+            AfroCut ገለልተኛ የፀጉር ቆራጮችን እንዲያገኙ፣ ቀጠሮ
+            እንዲጠይቁ ወይም እንዲያስይዙ ይረዳዎታል። አገልግሎቱ
+            ቀጠሮውን እንደተረጋገጠ ሲያሳይ ወይም የማረጋገጫ መልዕክት
+            ሲደርስዎ ብቻ ቀጠሮው የተረጋገጠ ይሆናል። ከማረጋገጥዎ
+            በፊት አገልግሎቱን፣ ቦታውን፣ ቀኑንና ሰዓቱን ያረጋግጡ።
+          </p>
+          <p>
+            የሚያቀርቡትን አገልግሎት፣ የመገኘት አቅማቸውንና
+            በመገለጫቸው ያለውን መረጃ ትክክለኛነት የፀጉር ቆራጮች
+            ራሳቸው ይጠየቃሉ። በግልጽ ሁኔታ ካልተገለጸ በስተቀር
+            AfroCut የቀጠሮ ማስያዣ መድረክ ነው፤ የፀጉር ቆራጮቹን
+            አያሠራም ወይም አገልግሎቱን በቀጥታ አያቀርብም።
+          </p>
+        </div>
       </section>
 
       <section class="terms-section" id="changes">
-        <h2><span class="section-number">03</span> Changes, cancellations &amp; late arrivals</h2>
-        <p>Manage or cancel your appointment through the Service as early as you can. Each barber may set their own cancellation window, late-arrival policy, and no-show fee; review those details before booking. Any applicable fee should be shown before you confirm.</p>
-        <p>If you arrive late, the barber may need to shorten, reschedule, or cancel the appointment. If a barber changes or cancels your booking, check the Service for updated details or contact support. Refund eligibility depends on the payment method, the barber's stated policy, and applicable law.</p>
+        <h2>
+          <span class="section-number">03</span>
+          <span class="lang-en">Changes, cancellations &amp; late arrivals</span>
+          <span class="lang-am">የቀጠሮ ለውጥ፣ ስረዛና ዘግይቶ መድረስ</span>
+        </h2>
+
+        <div class="lang-en">
+          <p>
+            Manage or cancel your appointment through the Service as early
+            as you can. Each barber may set their own cancellation window,
+            late-arrival policy, and no-show fee; review those details before
+            booking. Any applicable fee should be shown before you confirm.
+          </p>
+          <p>
+            If you arrive late, the barber may need to shorten, reschedule,
+            or cancel the appointment. If a barber changes or cancels your
+            booking, check the Service for updated details or contact support.
+            Refund eligibility depends on the payment method, the barber's
+            stated policy, and applicable law.
+          </p>
+        </div>
+
+        <div class="lang-am">
+          <p>
+            ቀጠሮዎን በአገልግሎቱ በኩል በተቻለ ፍጥነት ያስተዳድሩ
+            ወይም ይሰርዙ። እያንዳንዱ የፀጉር ቆራጭ የስረዛ ጊዜ ገደብ፣
+            ዘግይቶ መድረስ ላይ የሚከተለው መመሪያና ቀጠሮ ሳይገኙ
+            ሲቀር የሚከፈል ክፍያ ሊወስን ይችላል። ከማስያዝዎ በፊት
+            ዝርዝሩን ያንብቡ፤ የሚመለከተው ክፍያ ካለ ከማረጋገጥዎ
+            በፊት መታየት አለበት።
+          </p>
+          <p>
+            ዘግይተው ከደረሱ የፀጉር ቆራጩ ቀጠሮውን ማሳጠር፣
+            ወደ ሌላ ጊዜ ማዛወር ወይም መሰረዝ ሊያስፈልገው ይችላል።
+            የፀጉር ቆራጩ ቀጠሮዎን ከቀየረ ወይም ከሰረዘ፣
+            በአገልግሎቱ ያለውን አዲስ መረጃ ይመልከቱ ወይም
+            ድጋፍን ያግኙ። ገንዘብ ተመላሽ የሚደረግበት ሁኔታ
+            በክፍያ ዘዴው፣ በቆራጩ ፖሊሲና በሚመለከተው ሕግ
+            ላይ ይመሰረታል።
+          </p>
+        </div>
       </section>
 
       <section class="terms-section" id="payment">
-        <h2><span class="section-number">04</span> Prices &amp; payment</h2>
-        <p>Prices and any applicable taxes or fees will be shown during booking when available. The barber sets the price of their services. Some bookings may be paid in the app; others may be paid directly to the barber. The payment method and timing will be shown before you confirm.</p>
-        <p>You authorize the applicable charge when you submit a payment. Keep your payment details current and contact us promptly about a charge you believe is incorrect.</p>
+        <h2>
+          <span class="section-number">04</span>
+          <span class="lang-en">Prices &amp; payment</span>
+          <span class="lang-am">ዋጋና ክፍያ</span>
+        </h2>
+
+        <div class="lang-en">
+          <p>
+            Prices and any applicable taxes or fees will be shown during
+            booking when available. The barber sets the price of their
+            services. Some bookings may be paid in the app; others may be
+            paid directly to the barber. The payment method and timing will
+            be shown before you confirm.
+          </p>
+          <p>
+            You authorize the applicable charge when you submit a payment.
+            Keep your payment details current and contact us promptly about
+            a charge you believe is incorrect.
+          </p>
+        </div>
+
+        <div class="lang-am">
+          <p>
+            ዋጋዎችና ተጨማሪ የሚመለከቱ ታክሶች ወይም ክፍያዎች ካሉ
+            በቀጠሮ ማስያዣ ወቅት ይታያሉ። የአገልግሎቱን ዋጋ
+            የፀጉር ቆራጩ ይወስናል። አንዳንድ ቀጠሮዎች በመተግበሪያው
+            ውስጥ ሊከፈሉ ይችላሉ፤ ሌሎች ደግሞ በቀጥታ ለቆራጩ
+            ሊከፈሉ ይችላሉ። የክፍያ ዘዴውና ጊዜው ከማረጋገጥዎ
+            በፊት ይገለጻሉ።
+          </p>
+          <p>
+            ክፍያ ሲያስገቡ የሚመለከተውን ክፍያ እንዲፈጸም
+            ፈቃድ ይሰጣሉ። የክፍያ መረጃዎን ወቅታዊ ያድርጉ፤
+            ስህተት እንዳለበት የሚያምኑትን ክፍያ በተመለከተ
+            በፍጥነት ያሳውቁን።
+          </p>
+        </div>
       </section>
 
       <section class="terms-section" id="your-account">
-        <h2><span class="section-number">05</span> Your account</h2>
-        <p>Keep your sign-in details private and make sure your account information is accurate. You are responsible for activity on your account. Tell us promptly if you think someone else has accessed it.</p>
-        <p>We may restrict or suspend access when reasonably necessary to protect users, investigate suspected fraud or misuse, or comply with law. You can stop using the Service at any time; contact support if you need help closing your account.</p>
+        <h2>
+          <span class="section-number">05</span>
+          <span class="lang-en">Your account</span>
+          <span class="lang-am">የእርስዎ መለያ</span>
+        </h2>
+
+        <div class="lang-en">
+          <p>
+            Keep your sign-in details private and make sure your account
+            information is accurate. You are responsible for activity on
+            your account. Tell us promptly if you think someone else has
+            accessed it.
+          </p>
+          <p>
+            We may restrict or suspend access when reasonably necessary to
+            protect users, investigate suspected fraud or misuse, or comply
+            with law. You can stop using the Service at any time; contact
+            support if you need help closing your account.
+          </p>
+        </div>
+
+        <div class="lang-am">
+          <p>
+            የመግቢያ መረጃዎን በሚስጥር ይያዙ እና በመለያዎ ያለው
+            መረጃ ትክክለኛ መሆኑን ያረጋግጡ። በመለያዎ ላይ
+            ለሚፈጠር እንቅስቃሴ ኃላፊነት አለብዎት። ሌላ ሰው
+            መለያዎን እንደተጠቀመ ከጠረጠሩ በፍጥነት ያሳውቁን።
+          </p>
+          <p>
+            ተጠቃሚዎችን ለመጠበቅ፣ የማጭበርበር ወይም የተሳሳተ
+            አጠቃቀም ጥርጣሬን ለመመርመር ወይም ሕግን ለማክበር
+            በተገቢው ሁኔታ አስፈላጊ ሲሆን መዳረሻን ልንገድብ
+            ወይም ልናግድ እንችላለን። አገልግሎቱን በማንኛውም
+            ጊዜ መጠቀም ማቆም ይችላሉ፤ መለያዎን ለመዝጋት
+            እገዛ ካስፈለገዎት ድጋፍን ያግኙ።
+          </p>
+        </div>
       </section>
 
       <section class="terms-section" id="conduct">
-        <h2><span class="section-number">06</span> Respect &amp; safety</h2>
-        <p>Help keep the community welcoming. When using AfroCut or meeting for an appointment, you agree not to:</p>
-        <ul>
-          <li>Harass, threaten, discriminate against, or harm another person.</li>
-          <li>Post misleading, unlawful, or abusive content, or impersonate someone else.</li>
-          <li>Use the Service to commit fraud, disrupt its operation, or access it without permission.</li>
-          <li>Ignore a barber's reasonable safety instructions or appointment policies.</li>
-        </ul>
-        <p>We may review reports and take appropriate action, including removing content or limiting access.</p>
+        <h2>
+          <span class="section-number">06</span>
+          <span class="lang-en">Respect &amp; safety</span>
+          <span class="lang-am">አክብሮትና ደህንነት</span>
+        </h2>
+
+        <div class="lang-en">
+          <p>
+            Help keep the community welcoming. When using AfroCut or meeting
+            for an appointment, you agree not to:
+          </p>
+          <ul>
+            <li>Harass, threaten, discriminate against, or harm another person.</li>
+            <li>Post misleading, unlawful, or abusive content, or impersonate someone else.</li>
+            <li>Use the Service to commit fraud, disrupt its operation, or access it without permission.</li>
+            <li>Ignore a barber's reasonable safety instructions or appointment policies.</li>
+          </ul>
+          <p>
+            We may review reports and take appropriate action, including
+            removing content or limiting access.
+          </p>
+        </div>
+
+        <div class="lang-am">
+          <p>
+            ማህበረሰቡ ለሁሉም እንግዳ ተቀባይ እንዲሆን ያግዙ።
+            AfroCutን ሲጠቀሙ ወይም ለቀጠሮ ሲገናኙ የሚከተሉትን
+            እንዳያደርጉ ተስማምተዋል፦
+          </p>
+          <ul>
+            <li>ሌላን ሰው ማስጨነቅ፣ ማስፈራራት፣ መድልዎ ማድረግ ወይም መጉዳት።</li>
+            <li>አሳሳች፣ ሕገወጥ ወይም ስድብ የያዘ ይዘት ማተም፣ ወይም ሌላ ሰው መስሎ መቅረብ።</li>
+            <li>አገልግሎቱን ለማጭበርበር፣ ሥራውን ለማወክ ወይም ያለፈቃድ ለመግባት መጠቀም።</li>
+            <li>የፀጉር ቆራጩን ተገቢ የደህንነት መመሪያዎች ወይም የቀጠሮ ደንቦች ችላ ማለት።</li>
+          </ul>
+          <p>
+            ሪፖርቶችን መመርመር እና ይዘትን ማስወገድ ወይም
+            መዳረሻን መገደብን ጨምሮ ተገቢ እርምጃ መውሰድ እንችላለን።
+          </p>
+        </div>
       </section>
 
       <section class="terms-section" id="privacy">
-        <h2><span class="section-number">07</span> Your information</h2>
-        <p>We use personal information to provide and improve the Service, support bookings, and help keep accounts secure. Information needed to arrange an appointment may be shared with the relevant barber. Our Privacy Policy explains what we collect, how we use it, and the choices available to you.</p>
+        <h2>
+          <span class="section-number">07</span>
+          <span class="lang-en">Your information</span>
+          <span class="lang-am">የግል መረጃዎ</span>
+        </h2>
+
+        <div class="lang-en">
+          <p>
+            We use personal information to provide and improve the Service,
+            support bookings, and help keep accounts secure. Information
+            needed to arrange an appointment may be shared with the relevant
+            barber. Our Privacy Policy explains what we collect, how we use
+            it, and the choices available to you.
+          </p>
+        </div>
+
+        <div class="lang-am">
+          <p>
+            አገልግሎቱን ለማቅረብና ለማሻሻል፣ ቀጠሮዎችን
+            ለማስተዳደርና መለያዎችን ደህንነቱ የተጠበቀ ለማድረግ
+            የግል መረጃን እንጠቀማለን። ቀጠሮ ለማዘጋጀት
+            የሚያስፈልግ መረጃ ለሚመለከተው የፀጉር ቆራጭ ሊጋራ
+            ይችላል። የግላዊነት ፖሊሲያችን ምን መረጃ እንደምንሰበስብ፣
+            እንዴት እንደምንጠቀምበትና ምን ምርጫዎች እንዳሉዎት
+            ያብራራል።
+          </p>
+        </div>
       </section>
 
       <section class="terms-section" id="responsibility">
-        <h2><span class="section-number">08</span> Service availability &amp; responsibility</h2>
-        <p>We work to keep AfroCut available and accurate, but the Service may occasionally be interrupted or contain errors. We do not guarantee a barber's availability, the outcome of a service, or the accuracy of information provided by others.</p>
-        <p>To the extent permitted by law, AfroCut is not responsible for indirect or unforeseeable loss arising from use of the Service or for services provided by independent barbers. Nothing in these terms limits a right or remedy that cannot lawfully be limited. Where we are liable, our responsibility is limited to the extent permitted by applicable law.</p>
+        <h2>
+          <span class="section-number">08</span>
+          <span class="lang-en">Service availability &amp; responsibility</span>
+          <span class="lang-am">የአገልግሎት መገኘትና ኃላፊነት</span>
+        </h2>
+
+        <div class="lang-en">
+          <p>
+            We work to keep AfroCut available and accurate, but the Service
+            may occasionally be interrupted or contain errors. We do not
+            guarantee a barber's availability, the outcome of a service,
+            or the accuracy of information provided by others.
+          </p>
+          <p>
+            To the extent permitted by law, AfroCut is not responsible for
+            indirect or unforeseeable loss arising from use of the Service
+            or for services provided by independent barbers. Nothing in
+            these terms limits a right or remedy that cannot lawfully be
+            limited. Where we are liable, our responsibility is limited to
+            the extent permitted by applicable law.
+          </p>
+        </div>
+
+        <div class="lang-am">
+          <p>
+            AfroCut ያለማቋረጥ እንዲሰራና መረጃው ትክክለኛ እንዲሆን
+            እንጥራለን፤ ሆኖም አገልግሎቱ አንዳንድ ጊዜ ሊቋረጥ
+            ወይም ስህተቶች ሊኖሩት ይችላሉ። የፀጉር ቆራጭ መገኘትን፣
+            የአገልግሎቱን ውጤት ወይም በሌሎች የቀረበውን መረጃ
+            ትክክለኛነት ዋስትና አንሰጥም።
+          </p>
+          <p>
+            በሕግ በተፈቀደው መጠን AfroCut አገልግሎቱን ከመጠቀም
+            የሚመጣ ቀጥተኛ ያልሆነ ወይም አስቀድሞ ሊገመት
+            የማይችል ኪሳራ፣ ወይም በገለልተኛ የፀጉር ቆራጮች
+            ለሚሰጡ አገልግሎቶች ኃላፊ አይሆንም። በሕግ ሊገደብ
+            የማይችል መብት ወይም መፍትሄ በእነዚህ ውሎች
+            አይገደብም። ኃላፊነት በሚኖርብን ጊዜ በሚመለከተው
+            ሕግ በተፈቀደው መጠን ይወሰናል።
+          </p>
+        </div>
       </section>
 
       <section class="terms-section" id="updates">
-        <h2><span class="section-number">09</span> Changes to these terms</h2>
-        <p>We may update these terms as the Service changes or when required by law. We will post the revised terms here and update the date above. If a change materially affects your use of AfroCut, we will take reasonable steps to notify you. Continued use after updated terms take effect means you accept them.</p>
+        <h2>
+          <span class="section-number">09</span>
+          <span class="lang-en">Changes to these terms</span>
+          <span class="lang-am">የውሎቹ ለውጦች</span>
+        </h2>
+
+        <div class="lang-en">
+          <p>
+            We may update these terms as the Service changes or when
+            required by law. We will post the revised terms here and update
+            the date above. If a change materially affects your use of
+            AfroCut, we will take reasonable steps to notify you. Continued
+            use after updated terms take effect means you accept them.
+          </p>
+        </div>
+
+        <div class="lang-am">
+          <p>
+            አገልግሎቱ ሲለወጥ ወይም ሕግ ሲያስፈልግ እነዚህን
+            ውሎች ልናሻሽል እንችላለን። የተሻሻሉትን ውሎች
+            እዚህ እናትማለን እና ከላይ ያለውን ቀን እናዘምናለን።
+            ለውጡ በAfroCut አጠቃቀምዎ ላይ ከፍተኛ ተጽዕኖ
+            ካለው ለማሳወቅ ተገቢ ጥረት እናደርጋለን። የተሻሻሉት
+            ውሎች ከተፈጸሙ በኋላ አገልግሎቱን መቀጠል ውሎቹን
+            መቀበልዎን ያመለክታል።
+          </p>
+        </div>
       </section>
 
       <section class="terms-section" id="contact">
-        <h2><span class="section-number">10</span> Questions or concerns?</h2>
-        <p>For help with these terms, your account, or a booking, contact AfroCut through the support option in the app or website. If your question is about a barber's service, contact the barber directly as well.</p>
+        <h2>
+          <span class="section-number">10</span>
+          <span class="lang-en">Questions or concerns?</span>
+          <span class="lang-am">ጥያቄ ወይም ቅሬታ አለዎት?</span>
+        </h2>
+
+        <div class="lang-en">
+          <p>
+            For help with these terms, your account, or a booking, contact
+            AfroCut through the support option in the app or website. If
+            your question is about a barber's service, contact the barber
+            directly as well.
+          </p>
+        </div>
+
+        <div class="lang-am">
+          <p>
+            ስለ እነዚህ ውሎች፣ ስለ መለያዎ ወይም ስለ ቀጠሮ እገዛ
+            ከፈለጉ በመተግበሪያው ወይም በድረ-ገጹ ያለውን
+            የድጋፍ አማራጭ በመጠቀም AfroCutን ያግኙ። ጥያቄዎ
+            ስለ የፀጉር ቆራጭ አገልግሎት ከሆነ ቆራጩንም
+            በቀጥታ ያነጋግሩ።
+          </p>
+        </div>
       </section>
+
     </article>
   </main>
 
   <footer>
-    <span>© 2026 AfroCut. Built around good cuts and good company.</span>
-    <a href="#top">Back to top ↑</a>
+    <span class="inline-en">
+      © 2026 AfroCut. Built around good cuts and good company.
+    </span>
+    <span class="inline-am">
+      © 2026 AfroCut። ለጥሩ የፀጉር ቆራጭ እና ለጥሩ ግንኙነት የተሰራ።
+    </span>
+
+    <a href="#top">
+      <span class="inline-en">Back to top ↑</span>
+      <span class="inline-am">ወደ ላይ ተመለስ ↑</span>
+    </a>
   </footer>
+
+  <script>
+    (function () {
+      const body = document.body;
+      const toggle = document.getElementById("languageToggle");
+
+      function setLanguage(language) {
+        body.dataset.lang = language;
+        document.documentElement.lang = language === "am" ? "am" : "en";
+
+        toggle.textContent = language === "en" ? "አማርኛ" : "English";
+        toggle.setAttribute(
+          "aria-label",
+          language === "en" ? "Switch to Amharic" : "Switch to English"
+        );
+
+        try {
+          localStorage.setItem("afrocut-terms-language", language);
+        } catch (error) {
+          // The language switch still works if browser storage is unavailable.
+        }
+      }
+
+      toggle.addEventListener("click", function () {
+        setLanguage(body.dataset.lang === "en" ? "am" : "en");
+      });
+
+      let initialLanguage = "en";
+
+      try {
+        const savedLanguage = localStorage.getItem("afrocut-terms-language");
+
+        if (savedLanguage === "en" || savedLanguage === "am") {
+          initialLanguage = savedLanguage;
+        }
+      } catch (error) {
+        // Default to English if browser storage is unavailable.
+      }
+
+      setLanguage(initialLanguage);
+    })();
+  </script>
+
 </body>
 </html>
